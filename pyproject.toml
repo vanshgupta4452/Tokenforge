@@ -1,0 +1,21 @@
+[project]
+name = "miniserve"
+version = "0.1.0"
+description = "A profiled, from-scratch LLM inference engine"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.2",
+    "transformers>=4.44",
+    "numpy>=1.26",
+    "pytest>=8",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "triton>=2.3",
+    "bitsandbytes>=0.43",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
